@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Main page</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--normalize.css-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!-- latest jquery -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="crossorigin="anonymous"></script>
+    <!-- jQuery Modal -->
+    
+    
+    <!-- popper.js - koristi ga bootstrap popover-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <!-- bootstrap.js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!--font awesome-->
+    <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
+    <script src="js/lightbox.js"></script>
+    <script src="js/showhideMenuBar.js"></script>
+    <script src="js/fadeCitiesIn.js"></script>
+    <script src="js/orderAndEat.js"></script>
+    
+   <script>
+       $(function () {
+        $('[data-toggle="popover"]').popover();
+       })
+   </script>
+    
+</head>
+    <body> 
+        <div id="bgImage">
+            <img src="Media/asian-cuisine.jpg" alt="">
+        </div>
+        <!--NAVBAR-->
+        <nav class="navbar navbar-expand-md fixed-top navbar-dark" id="navigacija">
+
+            <div class="col col-lg-2"></div>
+            <div class="col col-lg-3 nav" id="orderDivDiv">
+                <button type="button" class="btn btn-primary order" data-toggle="modal" data-target="#orderFood">
+                    o.r.d.e.r
+                </button>
+            </div>
+
+            <div class="col col-lg-7">
+                    <div class="collapse navbar-collapse navbar-nav-scroll"  id="navItems">
+                        <ul class="navbar-nav nav-tabs">
+                            <li class="nav-item scroll"><a class ="nav-link" href="#delivery">Delivery</a></li>
+                            <li class="nav-item scroll"><a class ="nav-link" href="#showcase">Showcase</a></li>
+                            <li class="nav-item scroll"><a class ="nav-link" href="#ourcities">Our cities</a></li>
+                            <li class="nav-item scroll"><a class ="nav-link" href="#subscribe">Subscriptions</a></li>
+                            <li class="nav-item scroll"><a class ="nav-link" href="#contactus">Contact us</a></li>
+                        </ul>
+                    </div>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navItems" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="navButton">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+        <!--hidden navbar-->
+        <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark" id="hiddenBar">
+            <a class="navbar-brand" href="#videoContainer">
+                <img src="Logo/dragon.svg" width="44" height="44" alt="">
+            </a>
+
+            <div class="col col-lg-2"></div>
+            <div class="col col-lg-3 nav" id="orderDivDiv">
+                <button type="button" class="btn btn-primary order" data-toggle="modal" data-target="#orderFood">
+                        o.r.d.e.r
+                </button>
+            </div>
+
+            <div class="col col-lg-7">
+                    <div class="collapse navbar-collapse navbar-nav-scroll"  id="navItems">
+                        <ul class="navbar-nav nav-tabs">
+                            <li class="nav-item scroll"><a class ="nav-link" href="#delivery">Delivery</a></li>
+                            <li class="nav-item scroll"><a class ="nav-link" href="#showcase">Showcase</a></li>
+                            <li class="nav-item scroll"><a class ="nav-link" href="#ourcities">Our cities</a></li>
+                            <li class="nav-item scroll"><a class ="nav-link" href="#subscribe">Subscriptions</a></li>
+                            <li class="nav-item scroll"><a class ="nav-link" href="#contactus">Contact us</a></li>
+                        </ul>
+                    </div>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navItems" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="navButton">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+
+        <div id="videoContainer">
+            <div id="overlay"></div>
+            <video id="bgvideo" autoplay loop muted>
+                <source src="Media/Sizzling.mp4">
+            </video>
+
+            <div id="logo" class ="image-fluid" >
+                <embed src="Logo/dragon.svg" type="">
+            </div>
+        </div>
+
+            <!-- -------DELIVERY----------- -->
+        <main>
+        <div class="white">
+            <div class="container" id="delivery">
+                <h3>DAILY OFFER TOP 4 MEALS - DELIVERY</h3>
+
+                <div class="linija"></div>
+
+                <p>The key of our success is simple providing qulity consistent food that taste great every single time. We pride ourselves on  serving our customers delicious genuine dishes like: Chinese.</p>
+            </div>
+
+                <div id="topmeals">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-xs-12">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <img src="Icons/ramen.svg"  type="" class="svg deliveryIcon" id="svg1">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="naslov1"><h5>HOKUREN KATAKURI</h5></td>
+                                </tr>
+                                <tr>
+                                    <td><p id="p1">Asian food Grocer is your best resource for quality Asian food, tasty Asian food recepies, and flavorful Japanese seasonings. From our large selection you can order difficult-to-find organic ingredients,as well as tradional Japanese food like.</p></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-xs-12">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <embed src="Icons/wine.svg" type="" class="deliveryIcon" id="svg2">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="naslov2"><h5>HOKUREN KATAKURI</h5></td>
+                                </tr>
+                                <tr>
+                                    <td><p id="p2">Asian food Grocer is your best resource for quality Asian food, tasty Asian food recepies, and flavorful Japanese seasonings. From our large selection you can order difficult-to-find organic ingredients,as well as tradional Japanese food like.</p></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-xs-12">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <embed src="Icons/restaurant.svg" type="" class="deliveryIcon" id="svg3">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><h5 id="naslov3">HOKUREN KATAKURI</h5></td>
+                                </tr>
+                                <tr>
+                                    <td><p id="p3">Asian food Grocer is your best resource for quality Asian food, tasty Asian food recepies, and flavorful Japanese seasonings. From our large selection you can order difficult-to-find organic ingredients,as well as tradional Japanese food like.</p></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-xs-12">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <embed src="Icons/chili-pepper.svg" type="" class="deliveryIcon" id="svg4">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><h5 id="naslov4">HOKUREN KATAKURI</h5></td>
+                                </tr>
+                                <tr>
+                                    <td><p id="p4">Asian food Grocer is your best resource for quality Asian food, tasty Asian food recepies, and flavorful Japanese seasonings. From our large selection you can order difficult-to-find organic ingredients,as well as tradional Japanese food like.</p></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                <!-- -------SHOWCASE GALLERY----------- -->
+            <div class="white">
+                <div class="container" id="showcase">
+                    <h3>SHOWCASE OF OUR FAVORITE MEALS</h3>
+                    <div class="linija"></div>
+                </div>
+
+                <div class="container-fluid showcaseGallery">
+
+                    <div class="row">
+                        <a href="Media/Showcase/eggplant.jpg" data-lightbox="showcase" class="col-sm-3"><img src="Media/Showcase/eggplant-thumb.jpg" alt="" class="image-fluid img-thumbnail" ></a>
+                        <a href="Media/Showcase/food.jpg" data-lightbox="showcase" class="col-sm-3"><img src="Media/Showcase/food-thumb.jpg" alt="" class="image-fluid img-thumbnail"></a>
+                        <a href="Media/Showcase/food2.jpg" data-lightbox="showcase" class="col-sm-3"><img src="Media/Showcase/food2-thumb.jpg" alt="" class="image-fluid img-thumbnail"></a>
+                        <a href="Media/Showcase/fried-rice.jpg" data-lightbox="showcase" class="col-sm-3"><img src="Media/Showcase/fried-rice-thumb.jpg" alt="" class="image-fluid img-thumbnail"></a>
+                    </div>
+
+                    <div class="row">
+                        <a href="Media/Showcase/prawn.jpg" data-lightbox="showcase" class="col-sm-3"><img src="Media/Showcase/prawn-thumb.jpg" alt="" class="image-fluid img-thumbnail"></a>
+                        <a href="Media/Showcase/sushi.jpg" data-lightbox="showcase" class="col-sm-3"><img src="Media/Showcase/sushi-thumb.jpg" alt="" class="image-fluid img-thumbnail"></a>
+                        <a href="Media/Showcase/water-spinach.jpg" data-lightbox="showcase" class="col-sm-3"><img src="Media/Showcase/water-spinach-thumb.jpg" alt="" class="image-fluid img-thumbnail"></a>
+                        <a href="Media/Showcase/pad-thai.jpg" data-lightbox="showcase" class="col-sm-3"><img src="Media/Showcase/pad-thai-thumb.jpg" alt=""class="image-fluid img-thumbnail"></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- -------OUR CITIES----------- -->
+            <div class="white">
+            <div class="container" id="ourcities">
+                <h3>YOU CAN FINDS US IN ALL PARTS OF THE WORLD.</br>THESE ARE SOME OF THE PLACES WHERE YOU CAN FIND US</h3>
+                <div class="linija"></div>
+            </div>
+            <div id="cities" class="hideme">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-xs-12">
+                        <table class="citiesTable">
+                            <tr>
+                                <td><img src="Media/Cities/london.jpg" alt="london" class="img-fluid"></td>
+                            </tr>
+                            <tr>
+                                <td><h4>LONDON</h4></td>
+                            </tr>
+                            <tr>
+                                <td><p><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;&nbsp;&nbsp; St.James's 528</p></td>
+                            </tr>
+                            <tr>
+                                <td><p>
+                                    <i class="far fa-envelope"></i>
+                                    &nbsp;&nbsp;
+                                    <a href="mailto:">london_food@gmail.com</a>
+                                </p></td>
+                            </tr>
+                            <tr>
+                                <td><p>
+                                    <i class="fab fa-instagram"></i>
+                                    &nbsp;&nbsp;
+                                    <a href="http://">@londonfood</a>
+                                </p></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-xs-12">
+                        <table class="citiesTable">
+                            <tr>
+                                <td><img src="Media/Cities/paris.jpg" alt="paris" class="img-fluid"></td>
+                            </tr>
+                            <tr>
+                                <td><h4>PARIS</h4></td>
+                            </tr>
+                            <tr>
+                                <td><p><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;&nbsp;&nbsp; Puteaux 92800</p></td>
+                            </tr>
+                            <tr>
+                                <td><p>
+                                    <i class="far fa-envelope"></i>
+                                    &nbsp;&nbsp;
+                                    <a href="mailto:">paris_food@gmail.com</a>
+                                </p></td>
+                            </tr>
+                            <tr>
+                                <td><p>
+                                    <i class="fab fa-instagram"></i>
+                                    &nbsp;&nbsp;
+                                    <a href="http://">@parisfood</a>
+                                </p></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-xs-12">
+                        <table class="citiesTable">
+                            <tr>
+                                <td><img src="Media/Cities/newyork.jpg" alt="newyork" class="img-fluid"></td>
+                            </tr>
+                            <tr>
+                                <td><h4>NEW YORK</h4></td>
+                            </tr>
+                            <tr>
+                                <td><p><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;&nbsp;&nbsp; 224 Madison Ave</p></td>
+                            </tr>
+                            <tr>
+                                <td><p>
+                                    <i class="far fa-envelope"></i>
+                                    &nbsp;&nbsp;
+                                    <a  href="mailto:">ny_food@gmail.com</a>
+                                </p></td>
+                            </tr>
+                            <tr>
+                                <td><p>
+                                    <i class="fab fa-instagram"></i>
+                                    &nbsp;&nbsp;
+                                    <a href="http://">@newyorkfood</a>
+                                </p></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-xs-12">
+                        <table class="citiesTable">
+                            <tr>
+                                <td><img src="Media/Cities/jakarta.jpg" alt="jakarta" class="img-fluid"></td>
+                            </tr>
+                            <tr>
+                                <td><h4>TOKYO</h4></td>
+                            </tr>
+                            <tr>
+                                <td><p><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;&nbsp;&nbsp; Shibuya-ku, Tokyo</p></td>
+                            </tr>
+                            <tr>
+                                <td><p>
+                                    <i class="far fa-envelope"></i>
+                                    &nbsp;&nbsp;
+                                    <a href="mailto:">tokyo_food@gmail.com</a>
+                                </p></td>
+                            </tr>
+                            <tr>
+                                <td><p>
+                                    <i class="fab fa-instagram"></i>
+                                    &nbsp;&nbsp;
+                                    <a href="http://">@tokyotafood</a>
+                                </p></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+                <div class="inner">
+                <div class="container experience">
+                    <h3>READ THE EXPERIENCES OF OUR CUSTOMERS</h3>
+                    <div class="linija"></div>
+                </div>
+                
+
+                <!--HINT: New in Font Awesome 5 is the fas prefix, Font Awesome 4 uses fa.
+                The s in fas stands for solid, and some icons also have a regular mode, specified by using the prefix far. -->
+                <!-- https://bootsnipp.com/snippets/ObBxV -->
+                <div class="container" id="reviews">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="block-text rel zmin">
+                                <a title="" href="#">Hercules</a>
+                                <div class="mark">My rating: 
+                                    <span data-value="1" class="fa fa-star"></span>
+                                    <span data-value="2" class="fa fa-star"></span>
+                                    <span data-value="3" class="fa fa-star"></span>
+                                    <span data-value="4" class="fa fa-star"></span>
+                                    <span data-value="5" class="far fa-star"></span>
+                                </div>
+                                <p>Never before has there been a good film portrayal of ancient Greece's favourite myth. So why would Hollywood start now? This latest attempt at bringing the son of Zeus to the big screen is brought to us by X-Men: The last Stand director Brett Ratner. If the name of the director wasn't enough to dissuade ...</p>
+                                <ins class="ab zmin sprite sprite-i-triangle block"></ins>
+                            </div>
+                            <!-- https://getbootstrap.com/docs/4.3/examples/carousel/ -->
+                            <!-- https://www.philipp.haussleiter.de/2014/08/adding-background-image-to-svg-circles/ -->
+                            <div class="person-text rel">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events" width="100" height="100">
+                                        <defs>
+                                            <pattern id="image1" x="-50" y="-50" patternUnits="userSpaceOnUse"         height="100" width="100">
+                                                <image x="-80" y="-50" height="250" width="250" xlink:href="/Media/jamie2.jpg"/>
+                                            </pattern>
+                                        </defs>
+                                        <circle id="top" transform="translate(50,50)" r="45" fill="url(#image1)" />
+                                    </svg>
+
+                                <a title="" href="#">Jamie Oliver</a>
+                                <i>from Glasgow, Scotland</i>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 hidden-xs">
+                            <div class="block-text rel zmin">
+                                <a title="" href="#">The Purge: Anarchy</a>
+                                <div class="mark">My rating: 
+                                    <span data-value="1" class="fa fa-star"></span>
+                                    <span data-value="2" class="fa fa-star"></span>
+                                    <span data-value="3" class="fa fa-star"></span>
+                                    <span data-value="4" class="fa fa-star"></span>
+                                    <span data-value="5" class="fa fa-star"></span>
+                                </div>
+                                <p>The 2013 movie "The Purge" left a bad taste in all of our mouths as nothing more than a pseudo-slasher with a hamfisted plot, poor pacing, and a desperate attempt at "horror." Upon seeing the first trailer for "The Purge: Anarchy," my first and most immediate thought was "we really don't need another one of these."  </p>
+                                <ins class="ab zmin sprite sprite-i-triangle block"></ins>
+                            </div>
+                            <div class="person-text rel">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events" width="100" height="100">
+                                        <defs>
+                                            <pattern id="image2" x="-50" y="-50" patternUnits="userSpaceOnUse" height="100" width="100">
+                                                <image x="-35" y="-32" height="165" width="165" xlink:href="/Media/chan.jpg"/>
+                                            </pattern>
+                                        </defs>
+                                        <circle id="top" transform="translate(50,50)" r="45" fill="url(#image2)"/>
+                                    </svg>
+                                <a title="" href="#">Jackie Chan</a>
+                                <i>United States</i>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 hidden-sm hidden-xs">
+                            <div class="block-text rel zmin">
+                                <a title="" href="#">Planes: Fire & Rescue</a>
+                                <div class="mark">My rating: 
+                                    <span data-value="1" class="fa fa-star"></span>
+                                    <span data-value="2" class="far fa-star"></span>
+                                    <span data-value="3" class="far fa-star"></span>
+                                    <span data-value="4" class="far fa-star"></span>
+                                    <span data-value="5" class="far fa-star"></span>
+                                </div>
+                                <p>What a funny and entertaining film! I did not know what to expect, this is the fourth film in this vehicle's universe with the two Cars movies and then the first Planes movie. I was wondering if maybe Disney pushed it a little bit. However, Planes: Fire and Rescue is an entertaining film that is a fantastic sequel in this magical franchise. </p>
+                                <ins class="ab zmin sprite sprite-i-triangle block"></ins>
+                            </div>
+                            <div class="person-text rel">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events" width="100" height="100">
+                                        <defs>
+                                            <pattern id="image3" x="-50" y="-50" patternUnits="userSpaceOnUse" height="100" width="100">
+                                                <image x="-15" y="5" height="120" width="120" xlink:href="/Media/jackie.jpg"/>
+                                            </pattern>
+                                        </defs>
+                                        <circle id="top" transform="translate(50,50)" r="45" fill="url(#image3)"/>
+                                    </svg>
+                                <a title="" href="#">Jackie</a>
+                                <i>Zagreb, Hrvatska</i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         <!--SUBSCRIBE--------------->
+
+        <div class="white">
+        <div class="container" id="subscribe">
+            <h3>SUBSCRIBE TO SAVE MONEY</h3>
+            <div class="linija"></div>
+        </div>
+
+        <div class="container cards" style="width: 58%">
+            <div class="card-deck text-left row">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h5 class="my-0 font-weight-normal">TERMINATOR</h5>
+                    </div>
+                    <div class="card-body ">
+                        <h1 class="card-title pricing-card-title" style="color: #428bca">$219 <small  style="color: #428bca" >/ month</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                        <li>
+                            <i class="fas fa-check"></i>
+                            1 meal every day
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Order 24/7
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Access to new meals
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Free delivery
+                        </li>
+                        </ul>
+                        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up now</button>
+                    </div>
+                    </div>
+                </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                    <h5 class="my-0 font-weight-normal">EATER</h5>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title" style="color: #428bca">$99 <small style="color: #428bca">/ month</small></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                    <li> 
+                        <i class="fas fa-check"></i>
+                        1 meal 15 days/month
+                    </li>
+                    <li>
+                        <i class="fas fa-check"></i>
+                        Order 24/7
+                    </li>
+                    <li>
+                        <i class="fas fa-check"></i>
+                        Acess to new meals
+                    </li>
+                    <li>
+                        <i class="fas fa-check"></i>
+                        Free delivery
+                    </li>
+                    </ul>
+                    <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up now</button>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                    <h5 class="my-0 font-weight-normal">STARTER</h5>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title" style="color: #428bca">$9 <small style="color: #428bca">/ month</small></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                    <li>
+                        <i class="fas fa-check"></i>
+                        1 meal
+                    </li>
+                    <li>
+                        <i class="fas fa-check"></i>
+                        Order from 8 to 24
+                    </li>
+                    <li><i class="fas fa-times"></i></li>
+                    <li>
+                        <i class="fas fa-check"></i>
+                        Free delivery
+                    </li>
+                    </ul>
+                    <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up now</button>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <!--CONTANT US--------------->
+        <div class="white">
+        <div class="container" id="contactus">
+            <h3>CONTACT US</h3>
+            <div class="linija"></div>
+        </div>
+        <div class="forms">
+            <form action="http://www.fulek.com/VUA/SUPIT/ContactUs" method="0">
+                <div class="form-group row">
+                    <label for="nametxt" class="col-md-4 col-sm-12 col-form-label" style="text-align: left">Name:</label>
+                    <div class="col-md-8 col-sm-12 validate-input">
+                        <input type="text" name="name" id="nametxt" class="form-control form-control-sm" placeholder="Name" required>
+                    </div>
+                    <label for="emailtxt" class="col-md-4 col-sm-12 col-form-label" style="text-align: left" >E-mail:</label>
+                    <div class="col-md-8 col-sm-12">
+                        <input type="email" name="email" id="emailtxt" class="form-control form-control-sm" placeholder="E-mail" required>
+                    </div>
+                    <label for="messageimportance" class="col-md-4 col-sm-12 col-form-label" style="text-align: left">Message importance:</label>
+                    <div class="col-md-8 col-sm-12">
+                        <select name="importance" id="messageimportance" class="custom-select custom-select-sm">
+                            <option value="1">High</option>
+                            <option value="2">Low</option>
+                        </select>
+                    </div>
+                    <label for="newsletter" class="col-sm-4 col-xs-12 col-form-label" style="text-align: left">Receive newsletter:</label>
+                    <div class="col-sm-8 col-xs-12 custom-control custom-checkbox" style="text-align: left; padding-left: 15px">
+                        <input class="custom-control-input" type="checkbox" value="true" id="newsletter" name="newsletter">
+                        <input type="hidden" value="false" id="newsletterHidden" name="newsletter">
+                        <label class="custom-control-label" for="newsletter" style="margin-left: 25px; margin-top: 7px">Yes</label>
+                    </div>
+                    <label for="txtbox" class="col-md-4 col-sm-12 col-form-label" style="text-align: left">Your message:</label>
+                    <div class="col-md-8 col-sm-12">
+                        <textarea class="form-control" name="message" id="txtbox" placeholder="Maximum 200 characters..." required rows="8"></textarea>
+                        <div class="invalid-feedback">
+                    </div>
+                    <!-- <div class="col-md-4"></div> -->
+                    <div class="col-md-8" style="text-align: left; padding-left:0; margin-top: 10px;">
+                    <button class="btn btn-primary" type="submit">Send</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        </div>
+        </main>
+        
+        <!-- MODAL -->
+        <div>
+            <div class="modal fade" id="orderFood" tabindex="-1" role="dialog" aria-labelledby="orderFoodLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title" id="orderFoodLabel">ORDER & EAT</h1>
+                            <div class="orderLinija"></div>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body row">
+                            <div class="orderColumn col-sm-6 col-xs-12" id="menu">
+
+                                
+                            </div>
+                            <div class="orderColumn col-sm-6 col-xs-12">
+                                <h4 style="text-align: center">YOUR ORDERS</h4>
+                                <table class="table" id="ordersTable">
+                                    <thead id="myOrders">
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Title</th>
+                                            <th>Quantity</th>
+                                            <th>Price</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td></td>                                        
+                                            <td></td>
+                                            <td>Total:</td>
+                                            <td><span id="total">0</span><span>.00kn</span></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class = "d-none" id="popover-content">  
+            <div class="popover-content-container">
+                <p class="mb-1"><strong>Quantity:</strong></p>
+                <div class="input-group input-group-sm">
+                    <input type="number" class="form-control col-sm-3 mb-2 orderQuantity" name="quantity" value="1", min="1", max="10", width="10">
+                    </div>
+                    <p class="mb-1"><strong>Remark:</strong></p>
+                    <div class="input-group input-group-sm">
+                    <textarea class="form-control orderNotes"></textarea>
+                </div>
+            </div>
+            <div class="popover-footer">
+                <a href="#" class="btn btn-info btn-sm btnPoper poperClose">Close</a>
+                <button href="#" class="btn btn-info btn-sm btnPoper poperOrder">Order</button>
+            </div>
+        </div>
+
+      
+
+        <script src="js/videoautoplay.js"></script>
+        <!--svgCode.js-->
+        <script src="js/svgcode.js"></script>
+        <!--smoothscroll.js-->
+        <script src="js/smootscroll.js"></script>
+
+    </body>
+
+    <footer class="pt-4 pt-md-5 border-top">
+            <div class="row inFooter">
+              <div class="col-12 col-md">
+                <img class="mb-2 ml-1" src="Logo/dragon.svg" alt="" width="40" height="40">
+                <small class="d-block mb-3">&copy; 2017-2019</small>
+                <small class="d-block mb-3">Josip Pavić</small>
+              </div>
+              <div class="col-6 col-md">
+                <h5>Features</h5>
+                <ul class="list-unstyled text-small">
+                  <li><a href="#">Cool stuff</a></li>
+                  <li><a href="#">Random feature</a></li>
+                  <li><a href="#">Team feature</a></li>
+                  <li><a href="#">Stuff for developers</a></li>
+                  <li><a href="#">Another one</a></li>
+                  <li><a href="#">Last time</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md">
+                <h5>Resources</h5>
+                <ul class="list-unstyled text-small">
+                  <li><a href="#">Resource</a></li>
+                  <li><a href="#">Resource name</a></li>
+                  <li><a href="#">Another resource</a></li>
+                  <li><a href="#">Final resource</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md">
+                <h5>About</h5>
+                <ul class="list-unstyled text-small">
+                  <li><a href="#">Team</a></li>
+                  <li><a href="#">Locations</a></li>
+                  <li><a href="#">Privacy</a></li>
+                  <li><a href="#">Terms</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md">
+                  <ul class="list-unstyled text-small">
+                      <li><a href="#"><img src="Icons/twitter.svg" style="height: 30px" alt=""></a></li>
+                      <li><a href="#"><img src="Icons/instagram.svg" style="height: 30px" alt=""></a></li>
+                      <li><a href="#"><img src="Icons/google-play.svg" style="height: 30px" alt=""></a></li>
+                      <li><a href="#"><img src="Icons/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg" alt=""></a></li>
+                    </ul>
+                  </div>
+            </div>
+        </footer>
+</html>
+
+
+<!-- autocomplete jquery -->
